@@ -7,6 +7,7 @@
     <filter-mapping>
         <filter-name>Authentication</filter-name>
         <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
     <servlet>
         <servlet-name>loginServlet</servlet-name>

@@ -3,10 +3,15 @@ body {
     background-image: url("images/background.jpg");
 }
 .whitebox {
-    padding: 30px;
+    
     border: 3px solid rosybrown;
     background-color: white;
 }
+
+.whitebox img {
+    clear: both;
+}
+
 
 .form-group {
     margin-bottom: 20px;

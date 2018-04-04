@@ -13,6 +13,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Welcome fellow air-breathing human.</h1>
+        <div class="container whitebox">
+            <h1>Bienvenido humano.</h1>
+        </div>
     </body>
 </html>

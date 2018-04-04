@@ -17,6 +17,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -27,7 +28,6 @@ import javax.servlet.http.HttpSession;
  */
 @WebFilter("/Authentication")
 public class Authentication implements Filter {
-
 	private ServletContext context;
 	
 	public void init(FilterConfig fConfig) throws ServletException {
@@ -42,11 +42,10 @@ public class Authentication implements Filter {
 		
 		HttpSession session = req.getSession(false);
 		
-                if(session == null) {
-                
+                if(session == null){
+                    req.getRequestDispatcher("index.jsp").forward(request, response);
+                }else{
                     chain.doFilter(request, response);
-                } else {
-                    res.sendRedirect("unauthorized.jsp");
                 }
 	}
 

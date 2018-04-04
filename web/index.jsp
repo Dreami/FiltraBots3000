@@ -17,7 +17,8 @@
     </head>
     <body>
         <div class="container whitebox">
-            <h1>A ver, si no eres un bot autenticate.</h1>
+            <h1>A ver, si no eres un robot autenticate pues</h1>
+            <img src="images/are-you.jpg">
             <form method="POST" action="loginServlet">
                 <div class="row">
                     <div class="form-group">
@@ -31,6 +32,7 @@
                         <input class="form-control" type="password" name="pwd"/>
                     </div>
                 </div>
+                <button class="btn btn-success">Acceder</button>
             </form>
         </div>
     </body>
